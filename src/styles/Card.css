@@ -1,0 +1,13 @@
+.card {
+    width: 300px;
+    height: auto;
+
+    border-radius: 7px;
+    background-color: #2B76D9;
+    color: white;
+}
+
+.content ul li {
+    margin: 15px;
+    list-style-type: none;
+}
