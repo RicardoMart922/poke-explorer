@@ -1,28 +1,33 @@
-import { useEffect, useState } from 'react';
 import '../styles/Image.css';
+import { useEffect, useState } from 'react';
 
-function Image({ url, name }) {
+function Image({ url, name, weight, height }) {
   const [image, setImage] = useState(null);
 
   useEffect(() => {
     if (url) {
       setImage(
-        <>
+        <div className='content-image'>
+          <div className='pokemon-name'>
+            <h3>
+              {name}
+            </h3>
+          </div>
           <img 
-            className="img" 
+            className="pokemon-img" 
             src={url} 
             alt={name} 
             />
-          <h3 className="name">
-            {name}
-          </h3>
-        </>
+          <div className='characteristics'>
+            <span>Altura: {height} m Peso: {weight} kg</span>
+          </div>
+        </div>
       );
     }
-  }, [url, name]);
+  }, [url, name, weight, height]);
 
   return (
-    <div className="image">
+    <div className="content-box">
       {image}
     </div>
   );

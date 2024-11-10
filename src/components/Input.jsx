@@ -6,7 +6,7 @@ function Input({ type, value, action }) {
       type={type}
       value={value}
       onChange={action} 
-      placeholder="Digite o nome ou id do pokemon" 
+      placeholder="Digite o nome ou o ID do Pokémon (entre 1 e 1025, inclusive)." 
       className="input-text" 
     />
   );
